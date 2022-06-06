@@ -34,7 +34,7 @@ public class Quartett {
 //			sum= sum+m.verscheucheRaeuber();
 //		}
 
-		//sa iteratorom ce biti ovako, iterator ne koristi petlju :
+		//sa iteratorom ce biti ovako, iterator ne koristi for petlju :
 		Iterator<Musikant> i = quartetlist.iterator();
 		while(i.hasNext()) {
 			sum = sum + i.next().verscheucheRaeuber();
@@ -49,7 +49,7 @@ public class Quartett {
 
 		for (Musikant m : quartetlist) {
 
-			sum= sum+m.spieleMusic();//TODO zato ovdje radi sa spielmusic ne trazi lautstarke a drugdje ne radi
+			sum= sum+m.spieleMusic();
 		}
 
 		erg=sum/quartetlist.size();
@@ -57,7 +57,7 @@ public class Quartett {
 		return erg;
 	}
 
-	//bis hier muss ich perfect machen können!
+	//
 	
 	public ArrayList<Musikant> getMusikantenInLautstaerkeBereich(double von, double bis)
 	{
@@ -86,11 +86,45 @@ public class Quartett {
 			{
 				hm.put(beine, 1);
 			}
-		}  //?????OBJASNITI METODU; NAPISATI JEDNOSTAVNIJU VARIJANTU!!!!!!
+	} 
 		return hm;
 	}
 
+ //JEDNOSTAVNIJa VARIJANTa PREDHODNE METODE!!!!!!
+// 	public HashMap<Integer, Integer> getAnzahlMusikantenMitBeinAnzahl()
+// 	{
+// 		HashMap<Integer,Integer>erg = new HashMap<>();
+// 		int einz=0;
+// 		int zwei=0;
+// 		int drei=0;
+// 		int vier=0;
+// 		for( Musikant m : musikanten){
+// 			if(m.getAnzahlBeine()==1){
+// 				einz++;
+// 			}
+// 			else if(m.getAnzahlBeine()==2) {
+// 				zwei++;
+// 			}
+// 			else if(m.getAnzahlBeine()==3){
+// 				drei ++;
 
+// 			}
+// 			else if(m.anzahlBeine==4){
+// 				vier++;
+// 			}
+
+// 			if(einz > 0)
+// 				erg.put(1,einz);
+// 			if(zwei > 0)
+// 				erg.put(2,zwei);
+// 			if(drei > 0)
+// 				erg.put(3,drei);
+
+// 			if(vier >0)
+// 				erg.put(4,vier);
+// 		}
+// 		return erg;
+// 	}
 
 	public void printLautStaerkeAbsteigend() {
 		Collections.sort(quartetlist, new LautstaerkeComparator());
