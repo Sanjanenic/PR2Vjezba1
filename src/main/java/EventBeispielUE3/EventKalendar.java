@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-
     public class EventKalendar {
 
         private ArrayList<Event> lista = new ArrayList<>();
@@ -92,6 +91,7 @@ import java.util.HashMap;
 
         }
         //HASHMAP metoda bez parametara, vraca u mapi ort kao kljuc i broj elemnata po ortu kao vrijednost
+        
         public HashMap<String, Integer> getCountEventsByOrt(){
             HashMap<String, Integer> erg = new HashMap<>();
 //for ide kroz niz uzima elemnta ort kao key, ukoliko taj key nije vec u HashMap erg ide dalje povecava count i na kraju upise u mapu
